@@ -6,6 +6,8 @@ framework developed in the paper:
 > "Data Synchronization at High Frequencies"  
    Authors: Xinbing Kong, Cheng Liu, Bin Wu
 
+Please cite our papers ("Data Synchronization at High Frequencies") if you use the developed algorithms, thanks.
+
 The method recasts the data-synchronization problem for asynchronous
 high-frequency log-prices as a constrained matrix-completion problem.
 We recover the potential increment matrix by minimizing its nuclear
