@@ -1,0 +1,28 @@
+The main input of the toolbox is an asynchronous log-price matrix:
+
+Ylog_Nonsyn : T x N double
+
+T : number of time points on the union time grid.
+
+N : number of assets.
+
+Entries are log-prices.
+
+Missing observations must be encoded as 0, except that:
+
+The first row in each column must be non-zero (the toolbox will
+treat this as the initial log-price for that asset).
+
+Rows where all N entries are zero are interpreted as time
+instants with no trades for any asset; those rows are dropped
+internally when building the linear system.
+
+The toolbox constructs:
+
+A large, sparse constraint matrix A based on observed durations.
+
+A stacked vector b of observed increments over durations.
+
+A "synchronously filled" panel obtained by forward-filling prices
+within each asset, and uses its returns as an input to the PCA
+initializer and the ADMM solver.
