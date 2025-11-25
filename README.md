@@ -3,7 +3,7 @@
 This MATLAB toolbox implements the nuclear-norm-based synchronization
 framework developed in the paper:
 
-> "Data Synchronization at High Frequencies" : 
+> "Data Synchronization at High Frequencies"  
    Authors: Xinbing Kong, Cheng Liu, Bin Wu
 
 The method recasts the data-synchronization problem for asynchronous
